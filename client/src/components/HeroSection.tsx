@@ -44,9 +44,9 @@ export default function HeroSection() {
           
           <div className="hidden md:block">
             <img
-              src="/hero-illustration.png"
+              src="/hero-illustration-v2.png"
               alt="記帳代行サービスのイラスト"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-2xl"
             />
           </div>
         </div>
