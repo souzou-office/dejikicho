@@ -18,7 +18,8 @@ export default function HeroSection() {
       </div>
 
       <div className="container relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             完全デジタル記帳代行
           </h1>
@@ -32,13 +33,22 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <Button
-            size="lg"
-            className="bg-red-500 hover:bg-red-600 text-white text-lg px-8 py-6 h-auto rounded-full shadow-xl hover:shadow-2xl transition-all"
-            onClick={scrollToCTA}
-          >
-            料金を確認して申し込む
-          </Button>
+            <Button
+              size="lg"
+              className="bg-red-500 hover:bg-red-600 text-white text-lg px-8 py-6 h-auto rounded-full shadow-xl hover:shadow-2xl transition-all"
+              onClick={scrollToCTA}
+            >
+              料金を確認して申し込む
+            </Button>
+          </div>
+          
+          <div className="hidden md:block">
+            <img
+              src="/hero-illustration.png"
+              alt="記帳代行サービスのイラスト"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
       </div>
     </section>

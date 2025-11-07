@@ -32,7 +32,16 @@ export default function FlowSection() {
           シンプルな4ステップで、すぐに記帳代行サービスをご利用いただけます
         </p>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex justify-center mb-12">
+            <img
+              src="/workflow-illustration.png"
+              alt="利用の流れ"
+              className="w-full max-w-3xl h-auto"
+            />
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
@@ -70,6 +79,7 @@ export default function FlowSection() {
                 )}
               </div>
             ))}
+          </div>
           </div>
         </div>
       </div>
