@@ -4,19 +4,19 @@ export default function FeaturesSection() {
   const features = [
     {
       icon: Smartphone,
-      image: "/digital-service.png",
+      image: "/digital-simple.png",
       title: "完全デジタル対応",
       description: "レシートや領収書は写真を撮って送信するだけ。紙の書類を郵送する必要はありません。スマホ一つで完結する効率的な記帳代行サービスです。",
     },
     {
       icon: DollarSign,
-      image: "/cost-effective.png",
+      image: "/cost-simple.png",
       title: "効率化による低価格",
       description: "デジタル化とAI技術を活用した効率的な業務フローにより、月額１万円からという低価格を実現。高品質なサービスを手頃な価格でご提供します。",
     },
     {
       icon: Cloud,
-      image: "/cloud-service.png",
+      image: "/cloud-simple.png",
       title: "MFクラウド専門",
       description: "マネーフォワードクラウド会計に特化した専門サービス。MFクラウドの機能を最大限に活用し、スムーズな記帳業務をサポートします。",
     },

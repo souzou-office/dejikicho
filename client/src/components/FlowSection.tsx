@@ -35,7 +35,7 @@ export default function FlowSection() {
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-center mb-12">
             <img
-              src="/workflow-illustration.png"
+              src="/workflow-simple.png"
               alt="利用の流れ"
               className="w-full max-w-3xl h-auto"
             />
