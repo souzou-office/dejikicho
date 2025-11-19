@@ -1,4 +1,4 @@
-import { Smartphone, DollarSign, Cloud } from "lucide-react";
+import { Smartphone, DollarSign, Cloud, Zap, Building2, Target } from "lucide-react";
 
 export default function FeaturesSection() {
   const features = [
@@ -6,19 +6,34 @@ export default function FeaturesSection() {
       icon: Smartphone,
       image: "/digital-simple.png",
       title: "完全デジタル対応",
-      description: "レシートや領収書は写真を撮って送信するだけ。紙の書類を郵送する必要はありません。スマホ一つで完結する効率的な記帳代行サービスです。",
+      description: "レシート・請求書は写真撮影して専用システムで送信。郵送や持参は一切不要です。",
     },
     {
       icon: DollarSign,
       image: "/cost-simple.png",
       title: "効率化による低価格",
-      description: "デジタル化とAI技術を活用した効率的な業務フローにより、月額１万円からという低価格を実現。高品質なサービスを手頃な価格でご提供します。",
+      description: "1年目月額1万円～の業界最安水準。効率化により高品質・低価格を実現。",
     },
     {
       icon: Cloud,
       image: "/cloud-simple.png",
       title: "MFクラウド専門",
-      description: "マネーフォワードクラウド会計に特化した専門サービス。MFクラウドの機能を最大限に活用し、スムーズな記帳業務をサポートします。",
+      description: "MFクラウド会計に特化した記帳代行。システムを熟知した効率的な処理。",
+    },
+    {
+      icon: Zap,
+      title: "迅速な処理",
+      description: "デジタル化により、従来の記帳代行より圧倒的に速いデータ処理を実現。",
+    },
+    {
+      icon: Building2,
+      title: "司法書士法人運営",
+      description: "司法書士法人そうぞうが運営・管理。信頼できる外注先への完全委託で品質確保。",
+    },
+    {
+      icon: Target,
+      title: "個人事業主・法人対応",
+      description: "個人事業主から法人まで対応。事業規模に応じた柔軟な料金設定。",
     },
   ];
 
@@ -38,13 +53,22 @@ export default function FeaturesSection() {
               key={index}
               className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="flex justify-center mb-6">
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="w-32 h-32 object-contain"
-                />
-              </div>
+              {feature.image && (
+                <div className="flex justify-center mb-6">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-32 h-32 object-contain"
+                  />
+                </div>
+              )}
+              {!feature.image && (
+                <div className="flex justify-center mb-6">
+                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                    <feature.icon className="w-10 h-10 text-green-600" />
+                  </div>
+                </div>
+              )}
               <h3 className="text-xl font-bold text-center mb-4">
                 {feature.title}
               </h3>

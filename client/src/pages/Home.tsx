@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import PricingSection from "@/components/PricingSection";
+import PriceCalculator from "@/components/PriceCalculator";
+import ComparisonSection from "@/components/ComparisonSection";
+import ServiceDetailsSection from "@/components/ServiceDetailsSection";
 import FlowSection from "@/components/FlowSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -15,9 +17,10 @@ export default function Home() {
         <HeroSection />
         
         <FeaturesSection />
-        <PricingSection />
-
+        <PriceCalculator />
         <FlowSection />
+        <ComparisonSection />
+        <ServiceDetailsSection />
         <FAQSection />
         <CTASection />
       </main>

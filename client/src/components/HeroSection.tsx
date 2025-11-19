@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
-  const scrollToCTA = () => {
-    const element = document.getElementById("cta");
+  const scrollToCalculator = () => {
+    const element = document.getElementById("calculator");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -36,7 +36,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               className="bg-red-500 hover:bg-red-600 text-white text-lg px-8 py-6 h-auto rounded-full shadow-xl hover:shadow-2xl transition-all"
-              onClick={scrollToCTA}
+              onClick={scrollToCalculator}
             >
               料金を確認して申し込む
             </Button>

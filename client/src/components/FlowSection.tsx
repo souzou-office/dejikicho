@@ -1,34 +1,41 @@
-import { FileText, Settings, Send, CheckCircle } from "lucide-react";
+import { FileText, Settings, Send, FileCheck, BarChart3 } from "lucide-react";
 
 export default function FlowSection() {
   const steps = [
     {
       number: 1,
       icon: FileText,
-      title: "お申し込み",
+      title: "申し込み",
       description:
-        "簡単なお申し込みフォームに必要事項を入力していただきます。お申し込み後、3営業日以内に担当者からご連絡いたします。",
+        "料金確認後、専用フォームから申し込み",
     },
     {
       number: 2,
       icon: Settings,
-      title: "初期設定",
+      title: "MFクラウド設定",
       description:
-        "MFクラウドのアカウント設定や連携を行います。オンラインで完結するので、場所や時間を選ばず利用いただけます。",
+        "MFクラウド会計の初期設定をサポート",
     },
     {
       number: 3,
       icon: Send,
-      title: "レシート送信",
+      title: "書類送信",
       description:
-        "レシートや領収書の写真を撮って送信。紙の書類を郵送する必要はありません。スマホ一つで簡単に送信できます。",
+        "レシート・請求書を写真撮影して専用システムで送信",
     },
     {
       number: 4,
-      icon: CheckCircle,
-      title: "記帳完了",
+      icon: FileCheck,
+      title: "記帳代行",
       description:
-        "当社が責任を持って記帳業務を実施します。MFクラウド上でいつでも状況を確認でき、安心してお任せいただけます。",
+        "信頼できる外注パートナーが迅速に記帳処理を実施",
+    },
+    {
+      number: 5,
+      icon: BarChart3,
+      title: "月次レポート",
+      description:
+        "月次の記帳結果をMFクラウドで確認可能",
     },
   ];
 
@@ -39,11 +46,11 @@ export default function FlowSection() {
           利用の流れ
         </h2>
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-          シンプルな4ステップで、すぐに記帳代行サービスをご利用いただけます
+          シンプルて5ステップで、すぐに記帳代行サービスをご利用いただけます
         </p>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-5 gap-6">
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow h-full">
