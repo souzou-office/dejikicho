@@ -26,11 +26,11 @@ export default function ServiceDetailsSection() {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-gray-50/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
-          <span className="text-green-600 font-medium tracking-wider uppercase text-sm">Details</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">サービス詳細</h2>
+          <span className="inline-block py-1 px-3 rounded-full bg-green-50 text-green-600 font-medium tracking-wider uppercase text-xs mb-4 border border-green-100">Details</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">サービス詳細</h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
             サービスに含まれる内容と範囲をご確認ください
           </p>
@@ -38,9 +38,10 @@ export default function ServiceDetailsSection() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* 代行すること */}
-          <div className="bg-white rounded-xl p-8 border border-green-100 shadow-sm hover:shadow-md transition-all">
-            <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
-              <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
+          <div className="bg-white rounded-2xl p-8 border border-green-100 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-20 h-20 bg-green-50 rounded-bl-full -mr-4 -mt-4 opacity-50"></div>
+            <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6 relative z-10">
+              <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center shadow-sm">
                 <CheckCircle2 className="w-6 h-6 text-green-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900">代行すること</h3>
@@ -58,9 +59,10 @@ export default function ServiceDetailsSection() {
           </div>
 
           {/* 対応しないこと */}
-          <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
-              <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center">
+          <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-20 h-20 bg-gray-50 rounded-bl-full -mr-4 -mt-4 opacity-50"></div>
+            <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6 relative z-10">
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center shadow-sm">
                 <XCircle className="w-6 h-6 text-gray-500" />
               </div>
               <h3 className="text-xl font-bold text-gray-900">対応しないこと</h3>
@@ -78,9 +80,10 @@ export default function ServiceDetailsSection() {
           </div>
 
           {/* 必要なもの */}
-          <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
-              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+          <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-20 h-20 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50"></div>
+            <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6 relative z-10">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shadow-sm">
                 <FileText className="w-6 h-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900">必要なもの</h3>

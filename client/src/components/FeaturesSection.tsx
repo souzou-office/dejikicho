@@ -41,28 +41,33 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="features" className="py-24 bg-white relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <span className="text-green-600 font-medium tracking-wider uppercase text-sm">Features</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">当サービスの特徴</h2>
+          <span className="inline-block py-1 px-3 rounded-full bg-green-50 text-green-600 font-medium tracking-wider uppercase text-xs mb-4 border border-green-100">Features</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">当サービスの特徴</h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
             従来の記帳代行とは一線を画す、完全デジタル化された効率的なサービスを提供します。
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group">
-              <div className="w-16 h-16 mb-6 bg-gray-50 rounded-lg flex items-center justify-center group-hover:bg-green-50 transition-colors">
+            <div key={index} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -mr-4 -mt-4 opacity-50 group-hover:scale-110 transition-transform duration-500"></div>
+              
+              <div className="w-16 h-16 mb-6 bg-white border border-gray-100 rounded-2xl shadow-sm flex items-center justify-center group-hover:border-green-200 transition-colors relative z-10">
                 <img 
                   src={feature.image} 
                   alt={feature.title} 
                   className="w-10 h-10 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-500 leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">{feature.title}</h3>
+              <p className="text-gray-500 leading-relaxed relative z-10">
                 {feature.description}
               </p>
             </div>

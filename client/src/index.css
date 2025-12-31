@@ -43,10 +43,10 @@
 }
 
 :root {
-  /* Minimalist Green Theme */
-  --primary: oklch(0.5 0.15 142); /* Sophisticated Green */
+  /* Rich Green Theme */
+  --primary: oklch(0.5 0.18 142); /* More vibrant Green */
   --primary-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.5 0.15 142);
+  --sidebar-primary: oklch(0.5 0.18 142);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   
   --chart-1: oklch(0.8 0.1 142);
@@ -55,25 +55,25 @@
   --chart-4: oklch(0.5 0.15 142);
   --chart-5: oklch(0.4 0.15 142);
   
-  --radius: 0.3rem; /* Sharper corners for minimalist look */
+  --radius: 0.5rem; /* Softer corners */
   
-  --background: oklch(0.99 0 0); /* Pure white background */
-  --foreground: oklch(0.2 0 0); /* Dark grey text, not pure black */
+  --background: oklch(0.99 0.01 142); /* Very subtle green tint background */
+  --foreground: oklch(0.2 0.02 142); /* Dark green-grey text */
   
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0 0);
+  --card-foreground: oklch(0.2 0.02 142);
   
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.2 0.02 142);
   
-  --secondary: oklch(0.97 0 0); /* Very light grey for secondary */
-  --secondary-foreground: oklch(0.2 0 0);
+  --secondary: oklch(0.96 0.02 142); /* Light green-grey for secondary */
+  --secondary-foreground: oklch(0.2 0.02 142);
   
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.5 0 0);
+  --muted: oklch(0.96 0.02 142);
+  --muted-foreground: oklch(0.5 0.02 142);
   
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.2 0 0);
+  --accent: oklch(0.95 0.03 142); /* Stronger accent */
+  --accent-foreground: oklch(0.2 0.02 142);
   
   --destructive: oklch(0.6 0.2 25);
   --destructive-foreground: oklch(0.98 0 0);
@@ -195,6 +195,14 @@
   }
   
   .glass-panel {
-    @apply bg-white/80 backdrop-blur-sm border border-border/50 shadow-sm;
+    @apply bg-white/90 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  
+  .rich-gradient {
+    @apply bg-gradient-to-br from-green-50 to-white;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 }

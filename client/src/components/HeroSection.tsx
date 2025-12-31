@@ -16,10 +16,14 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative bg-white min-h-[90vh] flex items-center overflow-hidden">
-      <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center">
+    <section className="relative bg-gradient-to-br from-green-50/50 via-white to-white min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Shapes */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green-50/30 to-transparent skew-x-12 transform origin-top-right"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-100/20 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center relative z-10">
         <div className="md:w-1/2 mb-16 md:mb-0 pr-0 md:pr-12">
-          <div className="inline-block border border-green-200 bg-green-50 text-green-800 px-4 py-1 rounded-full text-sm font-medium mb-8 tracking-wide">
+          <div className="inline-block border border-green-200 bg-white/80 backdrop-blur-sm text-green-800 px-6 py-2 rounded-full text-sm font-medium mb-8 tracking-wide shadow-sm">
             月額1万円〜・100%外注・司法書士法人運営
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8 tracking-tight">
@@ -51,11 +55,15 @@ export default function HeroSection() {
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <div className="relative w-full max-w-lg">
-            <div className="absolute top-10 right-10 w-64 h-64 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+            {/* Enhanced Organic Shapes */}
+            <div className="absolute top-0 right-0 w-72 h-72 bg-green-200/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-0 left-10 w-72 h-72 bg-blue-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-green-100/50 rounded-full"></div>
+            
             <img 
-              src="/min-hero-v3.png"             alt="記帳代行サービスのイメージ" 
-              className="relative z-10 w-full h-auto drop-shadow-sm"
+              src="/min-hero-v3.png" 
+              alt="記帳代行サービスのイメージ" 
+              className="relative z-10 w-full h-auto drop-shadow-xl transform hover:scale-[1.02] transition-transform duration-500"
             />
           </div>
         </div>
