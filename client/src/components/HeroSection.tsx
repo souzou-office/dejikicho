@@ -61,9 +61,9 @@ export default function HeroSection() {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-green-100/50 rounded-full"></div>
             
             <img 
-              src="/min-hero-v3.png" 
+              src="/images/rich-hero-v1.png" 
               alt="記帳代行サービスのイメージ" 
-              className="relative z-10 w-full h-auto drop-shadow-xl transform hover:scale-[1.02] transition-transform duration-500"
+              className="relative z-10 w-full h-auto drop-shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
             />
           </div>
         </div>
