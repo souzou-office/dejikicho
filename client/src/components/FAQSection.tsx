@@ -34,27 +34,24 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-20">
-      <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          よくある質問
-        </h2>
-        <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-          お客様からよくいただくご質問をまとめました
-        </p>
+    <section id="faq" className="py-24 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-20">
+          <span className="text-green-600 font-medium tracking-wider uppercase text-sm">FAQ</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">よくある質問</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+            お客様から寄せられる質問をまとめました
+          </p>
+        </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-white rounded-lg px-6 border shadow-sm"
-              >
-                <AccordionTrigger className="text-left font-semibold hover:no-underline py-6">
+              <AccordionItem key={index} value={`item-${index}`} className="bg-white border border-gray-200 rounded-lg px-6 shadow-sm">
+                <AccordionTrigger className="text-left text-lg font-bold text-gray-900 py-6 hover:no-underline hover:text-green-600 transition-colors">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                <AccordionContent className="text-gray-600 leading-relaxed pb-6 text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

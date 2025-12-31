@@ -1,126 +1,109 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function PriceCalculator() {
-  const [year, setYear] = useState<string>("1");
-  const [transactions, setTransactions] = useState<string>("");
-  const [showResult, setShowResult] = useState(false);
-  const [monthlyPrice, setMonthlyPrice] = useState(0);
-  const [basePrice, setBasePrice] = useState(0);
-  const [additionalPrice, setAdditionalPrice] = useState(0);
+  const [entries, setEntries] = useState<number>(50);
+  const [price, setPrice] = useState<number>(10000);
 
   useEffect(() => {
     calculatePrice();
-  }, [year, transactions]);
+  }, [entries]);
 
   const calculatePrice = () => {
-    const transactionCount = parseInt(transactions) || 0;
-
-    if (transactionCount === 0) {
-      setShowResult(false);
-      return;
+    // 基本料金（100仕訳まで）
+    let calculatedPrice = 10000;
+    
+    // 100仕訳を超える場合、50仕訳ごとに+5000円
+    if (entries > 100) {
+      const additionalBlocks = Math.ceil((entries - 100) / 50);
+      calculatedPrice += additionalBlocks * 5000;
     }
-
-    const base = year === "1" ? 10000 : 15000;
-    let additional = 0;
-
-    // 仕訳数に応じた追加料金の計算
-    if (transactionCount > 100) {
-      additional = Math.floor((transactionCount - 100) / 50) * 2000;
-    }
-
-    const total = base + additional;
-
-    setBasePrice(base);
-    setAdditionalPrice(additional);
-    setMonthlyPrice(total);
-    setShowResult(true);
+    
+    setPrice(calculatedPrice);
   };
 
   return (
-    <section id="calculator" className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
-          料金シミュレーター
-        </h2>
-        <p className="text-center text-xl text-muted-foreground mb-20 max-w-3xl mx-auto">
-          予想される仕訳数を入力して、月額料金を確認しましょう
-        </p>
+    <section id="calculator" className="py-32 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-20">
+          <span className="text-green-600 font-medium tracking-wider uppercase text-sm">Pricing</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">料金シミュレーター</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto text-xl">
+            仕訳数に応じて最適なプランを自動計算します
+          </p>
+        </div>
 
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-12 shadow-2xl border-2 border-green-200">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-800">
-            予想される仕訳数を入力してください
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div>
-              <label
-                htmlFor="year"
-                className="block mb-4 font-bold text-gray-700 text-lg"
-              >
-                事業年数
-              </label>
-              <select
-                id="year"
-                value={year}
-                onChange={(e) => setYear(e.target.value)}
-                className="w-full p-5 border-2 border-gray-300 rounded-xl text-xl focus:outline-none focus:border-green-600 transition-colors"
-              >
-                <option value="1">1年目</option>
-                <option value="2">2年目以降</option>
-              </select>
-            </div>
-
-            <div>
-              <label
-                htmlFor="transactions"
-                className="block mb-4 font-bold text-gray-700 text-lg"
-              >
-                月間予想仕訳数
-              </label>
-              <input
-                type="number"
-                id="transactions"
-                value={transactions}
-                onChange={(e) => setTransactions(e.target.value)}
-                placeholder="例: 50"
-                min="0"
-                className="w-full p-5 border-2 border-gray-300 rounded-xl text-xl focus:outline-none focus:border-green-600 transition-colors"
-              />
-            </div>
-          </div>
-
-          {showResult && (
-            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-10 rounded-2xl mb-10 shadow-xl">
-              <div className="text-center">
-                <div className="text-5xl md:text-6xl font-bold mb-4">
-                  ¥{monthlyPrice.toLocaleString()}
+        <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+          <div className="p-8 md:p-16">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                <label className="block text-xl font-bold text-gray-900 mb-6">
+                  月間の仕訳数（目安）
+                </label>
+                <div className="relative mb-4">
+                  <input
+                    type="number"
+                    value={entries}
+                    onChange={(e) => setEntries(Number(e.target.value))}
+                    className="w-full text-4xl font-bold p-6 border-2 border-gray-200 rounded-2xl focus:border-green-600 focus:ring-0 transition-all outline-none text-gray-900"
+                    min="0"
+                    step="10"
+                  />
+                  <span className="absolute right-8 top-1/2 -translate-y-1/2 text-gray-400 text-xl font-bold">
+                    件 / 月
+                  </span>
                 </div>
-                <div className="text-base md:text-lg opacity-90 leading-relaxed">
-                  基本料金: ¥{basePrice.toLocaleString()}
-                  <br />
-                  {additionalPrice > 0 && (
-                    <>
-                      追加料金: ¥{additionalPrice.toLocaleString()}
-                      <br />
-                    </>
-                  )}
-                  月間仕訳数: {transactions}件
+                <p className="text-gray-500 mb-10">
+                  ※ 領収書1枚 ≒ 1仕訳、通帳1行 ≒ 1仕訳が目安です
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 text-gray-700">
+                    <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                    </div>
+                    <span className="text-lg font-medium">初期費用 0円</span>
+                  </div>
+                  <div className="flex items-center gap-4 text-gray-700">
+                    <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                    </div>
+                    <span className="text-lg font-medium">解約金 0円</span>
+                  </div>
+                  <div className="flex items-center gap-4 text-gray-700">
+                    <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                    </div>
+                    <span className="text-lg font-medium">月次レポート付き</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
 
-          <div className="text-center">
-            <Button
-              size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white px-12 py-8 text-xl md:text-2xl rounded-full shadow-xl hover:shadow-2xl transition-all"
-              onClick={() => {
-                window.open("https://forms.google.com/記帳代行申込フォーム", "_blank");
-              }}
-            >
-              この料金で申し込む
-            </Button>
+              <div className="bg-gray-50 rounded-3xl p-10 text-center border border-gray-100">
+                <p className="text-gray-500 font-medium mb-4 uppercase tracking-wider text-sm">Estimated Price</p>
+                <div className="text-7xl font-bold text-gray-900 mb-2 tracking-tight">
+                  {price.toLocaleString()}
+                  <span className="text-2xl text-gray-400 font-medium ml-2">円</span>
+                </div>
+                <p className="text-sm text-gray-400 mb-10">
+                  （税込 {Math.floor(price * 1.1).toLocaleString()}円 / 月）
+                </p>
+                
+                <Button 
+                  className="w-full bg-gray-900 hover:bg-gray-800 text-white text-xl font-bold py-8 rounded-xl shadow-lg transition-all transform hover:-translate-y-1"
+                >
+                  この料金で申し込む
+                  <ArrowRight className="ml-2 w-6 h-6" />
+                </Button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-green-50 p-6 text-center border-t border-green-100">
+            <p className="text-green-800 font-bold">
+              🎉 キャンペーン中：今なら初月無料でお試しいただけます！
+            </p>
           </div>
         </div>
       </div>

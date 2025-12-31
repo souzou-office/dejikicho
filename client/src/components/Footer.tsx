@@ -1,92 +1,51 @@
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
-      <div className="container">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* 会社情報 */}
-          <div>
-            <h3 className="text-white text-lg font-bold mb-4">
+    <footer className="bg-white border-t border-gray-100 py-16">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-4 gap-12 mb-16">
+          <div className="col-span-1 md:col-span-2">
+            <a href="#" className="text-xl font-bold text-gray-900 tracking-tight flex items-center gap-2 mb-6">
+              <div className="w-3 h-3 bg-green-600 rounded-full"></div>
               記帳代行サービス
-            </h3>
-            <p className="text-sm leading-relaxed">
-              司法書士法人運営による、完全デジタル対応の記帳代行サービス。MFクラウド専門で効率的な記帳業務をサポートします。
+            </a>
+            <p className="text-gray-500 mb-6 max-w-sm leading-relaxed">
+              完全デジタル・低価格・高品質な記帳代行サービス。<br />
+              司法書士法人が運営する安心のバックオフィス支援。
             </p>
           </div>
-
-          {/* サービス */}
+          
           <div>
-            <h3 className="text-white text-lg font-bold mb-4">サービス</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <button
-                  onClick={() => {
-                    const element = document.getElementById("features");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                  className="hover:text-green-400 transition-colors"
-                >
-                  サービスについて
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    const element = document.getElementById("pricing");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                  className="hover:text-green-400 transition-colors"
-                >
-                  料金プラン
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    const element = document.getElementById("flow");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                  className="hover:text-green-400 transition-colors"
-                >
-                  利用の流れ
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    const element = document.getElementById("faq");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                  className="hover:text-green-400 transition-colors"
-                >
-                  よくある質問
-                </button>
-              </li>
+            <h4 className="font-bold mb-6 text-gray-900">Service</h4>
+            <ul className="space-y-4 text-gray-500">
+              <li><button onClick={() => scrollToSection("features")} className="hover:text-green-600 transition-colors">Features</button></li>
+              <li><button onClick={() => scrollToSection("calculator")} className="hover:text-green-600 transition-colors">Pricing</button></li>
+              <li><button onClick={() => scrollToSection("flow")} className="hover:text-green-600 transition-colors">Workflow</button></li>
+              <li><button onClick={() => scrollToSection("faq")} className="hover:text-green-600 transition-colors">FAQ</button></li>
             </ul>
           </div>
-
-          {/* お問い合わせ */}
+          
           <div>
-            <h3 className="text-white text-lg font-bold mb-4">お問い合わせ</h3>
-            <ul className="space-y-2 text-sm">
-              <li>メール: info@example.com</li>
-              <li>電話: 03-XXXX-XXXX</li>
-              <li>受付時間: 平日 9:00-18:00</li>
+            <h4 className="font-bold mb-6 text-gray-900">Company</h4>
+            <ul className="space-y-4 text-gray-500">
+              <li>司法書士法人〇〇</li>
+              <li><a href="#" className="hover:text-green-600 transition-colors">プライバシーポリシー</a></li>
+              <li><a href="#" className="hover:text-green-600 transition-colors">特定商取引法に基づく表記</a></li>
+              <li><a href="#" className="hover:text-green-600 transition-colors">お問い合わせ</a></li>
             </ul>
           </div>
         </div>
-
-        <div className="border-t border-gray-800 pt-8 text-center text-sm">
-          <p>&copy; {currentYear} 記帳代行サービス. All rights reserved.</p>
+        
+        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-400 text-sm">
+            &copy; {new Date().getFullYear()} Kicho Daiko Service. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

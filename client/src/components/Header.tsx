@@ -14,93 +14,50 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-border">
-      <div className="container">
-        <div className="flex items-center justify-between h-16">
-          {/* ロゴ */}
-          <div className="flex items-center">
-            <div className="text-2xl font-bold text-green-600">
-              記帳代行サービス
-            </div>
-          </div>
-
-          {/* デスクトップナビゲーション */}
-          <nav className="hidden md:flex items-center gap-6">
-            <button
-              onClick={() => scrollToSection("features")}
-              className="text-sm font-medium text-foreground hover:text-green-600 transition-colors"
-            >
-              サービスについて
-            </button>
-            <button
-              onClick={() => scrollToSection("pricing")}
-              className="text-sm font-medium text-foreground hover:text-green-600 transition-colors"
-            >
-              料金プラン
-            </button>
-            <button
-              onClick={() => scrollToSection("flow")}
-              className="text-sm font-medium text-foreground hover:text-green-600 transition-colors"
-            >
-              利用の流れ
-            </button>
-            <button
-              onClick={() => scrollToSection("faq")}
-              className="text-sm font-medium text-foreground hover:text-green-600 transition-colors"
-            >
-              よくある質問
-            </button>
-            <Button
-              className="bg-red-500 hover:bg-red-600 text-white"
-              onClick={() => scrollToSection("cta")}
-            >
-              料金を確認して申し込む
-            </Button>
-          </nav>
-
-          {/* モバイルメニューボタン */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="メニュー"
-          >
-            <Menu className="h-6 w-6" />
-          </button>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div className="flex items-center">
+          <a href="#" className="text-xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
+            <div className="w-3 h-3 bg-green-600 rounded-full"></div>
+            記帳代行サービス
+          </a>
         </div>
+
+        <nav className="hidden md:flex items-center space-x-10">
+          <button onClick={() => scrollToSection("features")} className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">Features</button>
+          <button onClick={() => scrollToSection("calculator")} className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">Pricing</button>
+          <button onClick={() => scrollToSection("flow")} className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">Workflow</button>
+          <button onClick={() => scrollToSection("faq")} className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">FAQ</button>
+          <Button 
+            className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm rounded-lg px-6 py-2 shadow-none"
+            onClick={() => scrollToSection("calculator")}
+          >
+            お申し込み
+          </Button>
+        </nav>
+
+        {/* モバイルメニューボタン */}
+        <button
+          className="md:hidden p-2 text-gray-600"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="メニュー"
+        >
+          <Menu className="h-6 w-6" />
+        </button>
 
         {/* モバイルメニュー */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 p-4 md:hidden shadow-lg">
             <nav className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("features")}
-                className="text-sm font-medium text-foreground hover:text-green-600 transition-colors text-left"
+              <button onClick={() => scrollToSection("features")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-left py-2">Features</button>
+              <button onClick={() => scrollToSection("calculator")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-left py-2">Pricing</button>
+              <button onClick={() => scrollToSection("flow")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-left py-2">Workflow</button>
+              <button onClick={() => scrollToSection("faq")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-left py-2">FAQ</button>
+              <Button 
+                className="bg-gray-900 hover:bg-gray-800 text-white w-full mt-2"
+                onClick={() => scrollToSection("calculator")}
               >
-                サービスについて
-              </button>
-              <button
-                onClick={() => scrollToSection("pricing")}
-                className="text-sm font-medium text-foreground hover:text-green-600 transition-colors text-left"
-              >
-                料金プラン
-              </button>
-              <button
-                onClick={() => scrollToSection("flow")}
-                className="text-sm font-medium text-foreground hover:text-green-600 transition-colors text-left"
-              >
-                利用の流れ
-              </button>
-              <button
-                onClick={() => scrollToSection("faq")}
-                className="text-sm font-medium text-foreground hover:text-green-600 transition-colors text-left"
-              >
-                よくある質問
-              </button>
-              <Button
-                className="bg-red-500 hover:bg-red-600 text-white w-full"
-                onClick={() => scrollToSection("cta")}
-              >
-                料金を確認して申し込む
+                お申し込み
               </Button>
             </nav>
           </div>
