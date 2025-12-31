@@ -54,8 +54,7 @@ export default function HeroSection() {
             <div className="absolute top-10 right-10 w-64 h-64 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
             <img 
-              src="/min-hero.png" 
-              alt="記帳代行サービスのイメージ" 
+              src="/min-hero-v3.png"             alt="記帳代行サービスのイメージ" 
               className="relative z-10 w-full h-auto drop-shadow-sm"
             />
           </div>
