@@ -24,11 +24,10 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center relative z-10">
         <div className="md:w-1/2 mb-16 md:mb-0 pr-0 md:pr-12">
           <div className="inline-block border border-green-200 bg-white/80 backdrop-blur-sm text-green-800 px-6 py-2 rounded-full text-sm font-medium mb-8 tracking-wide shadow-sm">
-            月額1万円〜・司法書士法人運営
+            〜月額1万円から。司法書士法人が運営する安心のクラウド記帳〜
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8 tracking-tight">
-            完全デジタル<br />
-            <span className="text-green-600">記帳代行</span>サービス
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight mb-8 tracking-tight">
+            デジ記帳
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
             レシートや領収書の写真を送るだけ。<br />
