@@ -17,9 +17,8 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#" className="text-xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
-            <div className="w-3 h-3 bg-green-600 rounded-full"></div>
-            記帳代行サービス
+          <a href="#" className="flex items-center gap-2">
+            <img src="/images/logo-sozou.png" alt="司法書士法人そうぞう" className="h-10 w-auto" />
           </a>
         </div>
 
