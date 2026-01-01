@@ -54,16 +54,16 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-end">
-          <div className="relative w-full max-w-lg">
+          <div className="relative w-full max-w-2xl">
             {/* Enhanced Organic Shapes */}
-            <div className="absolute top-0 right-0 w-72 h-72 bg-green-200/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 left-10 w-72 h-72 bg-blue-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-green-100/50 rounded-full"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-green-200/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-0 left-10 w-96 h-96 bg-blue-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-green-100/50 rounded-full"></div>
             
             <img 
-              src="/images/hero-final.png" 
+              src="/images/hero-final-v2.png" 
               alt="記帳代行で未来へ。ビジネスの成長をサポートします。" 
-              className="relative z-10 w-full h-auto drop-shadow-xl transform hover:scale-[1.02] transition-transform duration-500 rounded-xl"
+              className="relative z-10 w-full h-auto drop-shadow-xl transform hover:scale-[1.02] transition-transform duration-500 rounded-2xl"
             />
           </div>
         </div>
