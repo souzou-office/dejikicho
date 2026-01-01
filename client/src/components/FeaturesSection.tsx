@@ -75,10 +75,10 @@ export default function FeaturesSection() {
               {/* パートナーロゴ表示エリア */}
               {feature.isPartner && (
                 <div className="mt-auto pt-4 border-t border-gray-100 relative z-10">
-                  <p className="text-xs text-gray-400 mb-2">提携パートナー企業:</p>
+                  <p className="text-sm text-gray-500 mb-3 font-medium">提携パートナー企業:</p>
                   <div className="flex items-center gap-2">
-                    <img src="/images/logo-partner.png" alt="株式会社Ｔ－ＳＴＯＲＹ" className="h-6 w-auto opacity-80" />
-                    <span className="text-xs font-bold text-gray-600">株式会社Ｔ－ＳＴＯＲＹ</span>
+                    <img src="/images/logo-partner.png" alt="株式会社Ｔ－ＳＴＯＲＹ" className="h-10 w-auto" />
+                    <span className="text-base font-bold text-gray-800">株式会社Ｔ－ＳＴＯＲＹ</span>
                   </div>
                 </div>
               )}

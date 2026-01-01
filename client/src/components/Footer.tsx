@@ -20,8 +20,8 @@ export default function Footer() {
             </p>
             <div className="mt-8">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Partner:</span>
-                <img src="/images/logo-partner.png" alt="株式会社Ｔ－ＳＴＯＲＹ" className="h-8 w-auto opacity-70 grayscale hover:grayscale-0 transition-all" />
+                <span className="text-sm text-gray-500 font-medium uppercase tracking-wider">Partner:</span>
+                <img src="/images/logo-partner.png" alt="株式会社Ｔ－ＳＴＯＲＹ" className="h-10 w-auto" />
               </div>
               <p className="text-xs text-gray-500">
                 パートナー企業の株式会社Ｔ－ＳＴＯＲＹが記帳業務を行います。
