@@ -27,7 +27,7 @@ export default function HeroSection() {
             〜月額1万円から。司法書士法人が運営する安心のクラウド記帳〜
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight mb-8 tracking-tight">
-            デジ記帳
+            <span className="text-green-600">デジ</span>記帳
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
             レシートや領収書の写真を送るだけ。<br />
