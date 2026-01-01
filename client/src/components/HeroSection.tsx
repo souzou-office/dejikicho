@@ -24,7 +24,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center relative z-10">
         <div className="md:w-1/2 mb-16 md:mb-0 pr-0 md:pr-12">
           <div className="inline-block border border-green-200 bg-white/80 backdrop-blur-sm text-green-800 px-6 py-2 rounded-full text-sm font-medium mb-8 tracking-wide shadow-sm">
-            月額1万円〜・100%外注・司法書士法人運営
+            月額1万円〜・司法書士法人運営
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8 tracking-tight">
             完全デジタル<br />

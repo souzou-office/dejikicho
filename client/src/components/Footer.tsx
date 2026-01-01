@@ -18,9 +18,14 @@ export default function Footer() {
               完全デジタル・低価格・高品質な記帳代行サービス。<br />
               司法書士法人が運営する安心のバックオフィス支援。
             </p>
-            <div className="flex items-center gap-3 mt-8">
-              <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Partner:</span>
-              <img src="/images/logo-partner.png" alt="Partner Logo" className="h-8 w-auto opacity-70 grayscale hover:grayscale-0 transition-all" />
+            <div className="mt-8">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Partner:</span>
+                <img src="/images/logo-partner.png" alt="株式会社Ｔ－ＳＴＯＲＹ" className="h-8 w-auto opacity-70 grayscale hover:grayscale-0 transition-all" />
+              </div>
+              <p className="text-xs text-gray-500">
+                パートナー企業の株式会社Ｔ－ＳＴＯＲＹが記帳業務を行います。
+              </p>
             </div>
           </div>
           
@@ -38,9 +43,6 @@ export default function Footer() {
             <h4 className="font-bold mb-6 text-gray-900">Company</h4>
             <ul className="space-y-4 text-gray-500">
               <li>司法書士法人そうぞう</li>
-              <li><a href="#" className="hover:text-green-600 transition-colors">プライバシーポリシー</a></li>
-              <li><a href="#" className="hover:text-green-600 transition-colors">特定商取引法に基づく表記</a></li>
-              <li><a href="#" className="hover:text-green-600 transition-colors">お問い合わせ</a></li>
             </ul>
           </div>
         </div>
