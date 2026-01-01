@@ -31,6 +31,7 @@ export default function FeaturesSection() {
       image: "/min-feat-legal.png",
       title: "司法書士法人運営",
       description: "司法書士法人そうぞうが運営・管理。信頼できる外注先への完全委託で品質確保。",
+      isPartner: true, // パートナーロゴ表示用フラグ
     },
     {
       icon: Target,
@@ -56,7 +57,7 @@ export default function FeaturesSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div key={index} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden flex flex-col">
               <div className="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -mr-4 -mt-4 opacity-50 group-hover:scale-110 transition-transform duration-500"></div>
               
               <div className="w-16 h-16 mb-6 bg-white border border-gray-100 rounded-2xl shadow-sm flex items-center justify-center group-hover:border-green-200 transition-colors relative z-10">
@@ -67,9 +68,20 @@ export default function FeaturesSection() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">{feature.title}</h3>
-              <p className="text-gray-500 leading-relaxed relative z-10">
+              <p className="text-gray-500 leading-relaxed relative z-10 mb-4">
                 {feature.description}
               </p>
+              
+              {/* パートナーロゴ表示エリア */}
+              {feature.isPartner && (
+                <div className="mt-auto pt-4 border-t border-gray-100 relative z-10">
+                  <p className="text-xs text-gray-400 mb-2">業務委託パートナー:</p>
+                  <div className="flex items-center gap-2">
+                    <img src="/images/logo-partner.png" alt="株式会社Ｔ－ＳＴＯＲＹ" className="h-6 w-auto opacity-80" />
+                    <span className="text-xs font-bold text-gray-600">株式会社Ｔ－ＳＴＯＲＹ</span>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
