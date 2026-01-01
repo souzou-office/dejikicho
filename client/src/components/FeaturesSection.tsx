@@ -30,7 +30,7 @@ export default function FeaturesSection() {
       icon: Building2,
       image: "/min-feat-legal.png",
       title: "司法書士法人運営",
-      description: "司法書士法人そうぞうが運営・管理。信頼できる外注先への完全委託で品質確保。",
+      description: "司法書士法人そうぞうが運営・管理。信頼できる連携先との協力体制で品質確保。",
       isPartner: true, // パートナーロゴ表示用フラグ
     },
     {
@@ -75,7 +75,7 @@ export default function FeaturesSection() {
               {/* パートナーロゴ表示エリア */}
               {feature.isPartner && (
                 <div className="mt-auto pt-4 border-t border-gray-100 relative z-10">
-                  <p className="text-xs text-gray-400 mb-2">業務委託パートナー:</p>
+                  <p className="text-xs text-gray-400 mb-2">提携パートナー企業:</p>
                   <div className="flex items-center gap-2">
                     <img src="/images/logo-partner.png" alt="株式会社Ｔ－ＳＴＯＲＹ" className="h-6 w-auto opacity-80" />
                     <span className="text-xs font-bold text-gray-600">株式会社Ｔ－ＳＴＯＲＹ</span>
