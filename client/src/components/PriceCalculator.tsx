@@ -5,7 +5,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 
 export default function PriceCalculator() {
-  const [entries, setEntries] = useState<number>(100);
+  const [entries, setEntries] = useState<number | "">(100);
   const [price, setPrice] = useState<number>(11000);
   const [isStartupPlan, setIsStartupPlan] = useState<boolean>(true);
 
@@ -15,21 +15,22 @@ export default function PriceCalculator() {
 
   const calculatePrice = () => {
     let calculatedPrice = 0;
+    const numEntries = entries === "" ? 0 : entries;
 
     if (isStartupPlan) {
       // 創業応援プラン: 150仕訳以内なら一律11,000円
       // ※150仕訳を超える場合は法人通常プランへの切り替えを促すUIにするか、
       // ここではシミュレーションとして通常プランの計算を適用するなどの処理が必要ですが、
       // 今回は「創業応援プランは150仕訳まで」という前提で、それを超えたら通常プランのロジックで計算しつつ警告を出す形にします。
-      if (entries <= 150) {
+      if (numEntries <= 150) {
         calculatedPrice = 11000;
       } else {
         // 150超えたら自動的に通常プラン計算（UIで注釈出す）
-        calculatedPrice = calculateNormalPlan(entries);
+        calculatedPrice = calculateNormalPlan(numEntries);
       }
     } else {
       // 法人通常プラン
-      calculatedPrice = calculateNormalPlan(entries);
+      calculatedPrice = calculateNormalPlan(numEntries);
     }
     
     setPrice(calculatedPrice);
@@ -101,7 +102,17 @@ export default function PriceCalculator() {
                   <input
                     type="number"
                     value={entries}
-                    onChange={(e) => setEntries(Number(e.target.value))}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      if (val === "") {
+                        setEntries("");
+                      } else {
+                        const num = parseInt(val, 10);
+                        if (!isNaN(num) && num >= 0) {
+                          setEntries(num);
+                        }
+                      }
+                    }}
                     className="w-full text-4xl font-bold p-6 border-2 border-gray-200 rounded-2xl focus:border-green-600 focus:ring-0 transition-all outline-none text-gray-900"
                     min="0"
                     step="10"
@@ -114,7 +125,7 @@ export default function PriceCalculator() {
                   ※ 領収書1枚 ≒ 1仕訳、通帳1行 ≒ 1仕訳が目安です
                 </p>
                 
-                {isStartupPlan && entries > 150 && (
+                {isStartupPlan && entries !== "" && entries > 150 && (
                   <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-8 flex gap-3 items-start">
                     <Info className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
                     <p className="text-sm text-yellow-800">
