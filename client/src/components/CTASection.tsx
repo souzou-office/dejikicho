@@ -34,7 +34,7 @@ export default function CTASection() {
             className="bg-[#06C755] hover:bg-[#05b04c] text-white text-lg px-10 py-8 rounded-xl font-bold shadow-lg transition-all transform hover:scale-105"
             asChild
           >
-            <a href="https://lin.ee/2kFAzzN" target="_blank" rel="noopener noreferrer">
+            <a href="https://lin.ee/IpBr6iu" target="_blank" rel="noopener noreferrer">
               LINEで無料相談する
             </a>
           </Button>
