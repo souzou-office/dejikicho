@@ -22,8 +22,8 @@ export default function HeroSection() {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green-50/30 to-transparent skew-x-12 transform origin-top-right"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-100/20 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center relative z-10">
-        <div className="md:w-1/2 mb-16 md:mb-0 pr-0 md:pr-12">
+      <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center relative z-10 gap-4">
+        <div className="md:w-[55%] mb-10 md:mb-0">
           <div className="inline-block border border-green-200 bg-white/80 backdrop-blur-sm text-green-800 px-6 py-2 rounded-full text-sm font-medium mb-5 tracking-wide shadow-sm">
             〜月額1万円から。司法書士運営の完全デジタル記帳代行〜
           </div>
@@ -53,7 +53,7 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        <div className="md:w-[45%] flex justify-center md:justify-end">
           <div className="relative w-full max-w-2xl">
             {/* Enhanced Organic Shapes */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-green-200/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
