@@ -24,19 +24,17 @@ export default function CTASection() {
           <Button
             size="lg"
             className="bg-green-600 hover:bg-green-500 text-white text-lg px-10 py-8 rounded-xl font-bold shadow-lg transition-all transform hover:scale-105"
-            asChild
+            onClick={scrollToCalculator}
           >
-            <a href="https://lin.ee/IpBr6iu" target="_blank" rel="noopener noreferrer">
-              料金を確認して申し込む
-              <ArrowRight className="ml-2 h-6 w-6" />
-            </a>
+            料金を確認して申し込む
+            <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
           <Button
             size="lg"
             className="bg-[#06C755] hover:bg-[#05b04c] text-white text-lg px-10 py-8 rounded-xl font-bold shadow-lg transition-all transform hover:scale-105"
             asChild
           >
-            <a href="https://lin.ee/2kFAzzN" target="_blank" rel="noopener noreferrer">
+            <a href="https://lin.ee/IpBr6iu" target="_blank" rel="noopener noreferrer">
               LINEで無料相談する
             </a>
           </Button>
