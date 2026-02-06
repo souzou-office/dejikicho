@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/assetUrl";
 import { FileText, Settings, Send, FileCheck, BarChart3 } from "lucide-react";
 
 export default function FlowSection() {
@@ -5,7 +6,7 @@ export default function FlowSection() {
     {
       number: 1,
       icon: FileText,
-      image: "/min-flow-apply.png",
+      image: assetUrl("/min-flow-apply.png"),
       title: "申し込み",
       description:
         "料金確認後、専用フォームから申し込み",
@@ -13,7 +14,7 @@ export default function FlowSection() {
     {
       number: 2,
       icon: Settings,
-      image: "/min-flow-setup.png",
+      image: assetUrl("/min-flow-setup.png"),
       title: "MFクラウド設定",
       description:
         "MFクラウド会計の初期設定をサポート",
@@ -21,7 +22,7 @@ export default function FlowSection() {
     {
       number: 3,
       icon: Send,
-      image: "/min-flow-send.png",
+      image: assetUrl("/min-flow-send.png"),
       title: "書類送信",
       description:
         "レシート・請求書を写真撮影して専用システムで送信",
@@ -29,7 +30,7 @@ export default function FlowSection() {
     {
       number: 4,
       icon: FileCheck,
-      image: "/min-flow-work.png",
+      image: assetUrl("/min-flow-work.png"),
       title: "記帳代行",
       description:
         "信頼できる外注パートナーが迅速に記帳処理を実施",
@@ -37,7 +38,7 @@ export default function FlowSection() {
     {
       number: 5,
       icon: BarChart3,
-      image: "/min-flow-report.png",
+      image: assetUrl("/min-flow-report.png"),
       title: "月次レポート",
       description:
         "月次の記帳結果をMFクラウドで確認可能",

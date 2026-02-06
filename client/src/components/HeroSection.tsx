@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { assetUrl } from "@/lib/assetUrl";
 
 export default function HeroSection() {
   const scrollToCalculator = () => {
@@ -60,7 +61,7 @@ export default function HeroSection() {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-green-100/50 rounded-full"></div>
             
             <img 
-              src="/images/hero-final-v2.png" 
+              src={assetUrl("/images/hero-final-v2.png")} 
               alt="記帳代行で未来へ。ビジネスの成長をサポートします。" 
               className="relative z-10 w-full h-auto drop-shadow-xl transform hover:scale-[1.02] transition-transform duration-500 rounded-2xl"
             />
