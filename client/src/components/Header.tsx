@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { assetUrl } from "@/lib/assetUrl";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 
@@ -18,7 +19,7 @@ export default function Header() {
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <div className="flex items-center">
           <a href="#" className="flex items-center gap-2">
-            <img src="/images/logo-sozou.png" alt="司法書士法人そうぞう" className="h-14 w-auto" />
+            <img src={assetUrl("/images/logo-sozou.png")} alt="司法書士法人そうぞう" className="h-14 w-auto" />
           </a>
         </div>
 
