@@ -24,13 +24,13 @@ export default function HeroSection() {
       
       <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center relative z-10">
         <div className="md:w-1/2 mb-16 md:mb-0 pr-0 md:pr-12">
-          <div className="inline-block border border-green-200 bg-white/80 backdrop-blur-sm text-green-800 px-6 py-2 rounded-full text-sm font-medium mb-8 tracking-wide shadow-sm">
+          <div className="inline-block border border-green-200 bg-white/80 backdrop-blur-sm text-green-800 px-6 py-2 rounded-full text-sm font-medium mb-5 tracking-wide shadow-sm">
             〜月額1万円から。司法書士運営の完全デジタル記帳代行〜
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight mb-8 tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight mb-5 tracking-tight">
             <span className="text-green-600">デジ</span>記帳
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
+          <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
             レシートや領収書の写真を送るだけ。<br />
             面倒な記帳業務から解放され、本業に集中できる環境を。<br />
             MFクラウド専門・効率重視の新しい記帳代行です。
