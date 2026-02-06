@@ -140,11 +140,6 @@ export default function PriceCalculator() {
                     <span className="text-base">初期登録設定費用（初年度のみ）</span>
                     <span className="font-bold">11,000円</span>
                   </div>
-                  <div className="flex justify-between items-center text-gray-700">
-                    <span className="text-base">会計ソフト利用料（年額）</span>
-                    <span className="font-bold">59,760円</span>
-                  </div>
-                  <p className="text-xs text-gray-400 mt-2 text-right">※ Money Forward クラウド利用料</p>
                 </div>
               </div>
 
