@@ -26,7 +26,8 @@ export default function Footer() {
                 <img src={assetUrl("/images/logo-partner.png")} alt="株式会社Ｔ－ＳＴＯＲＹ" className="h-10 w-auto" />
               </div>
               <p className="text-xs text-gray-500">
-                パートナー企業の株式会社Ｔ－ＳＴＯＲＹが記帳業務を行います。
+                ご契約は司法書士法人そうぞうが主体となります。<br />
+                記帳業務は提携パートナーの株式会社Ｔ－ＳＴＯＲＹが担当いたします。
               </p>
             </div>
           </div>
