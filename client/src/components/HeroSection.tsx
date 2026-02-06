@@ -39,11 +39,9 @@ export default function HeroSection() {
             <Button
               size="lg"
               className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-lg px-10 py-7 rounded-lg shadow-sm transition-all"
-              asChild
+              onClick={scrollToCalculator}
             >
-              <a href="https://lin.ee/IpBr6iu" target="_blank" rel="noopener noreferrer">
-                料金を確認して申し込む
-              </a>
+              料金を確認して申し込む
             </Button>
             <Button 
               variant="outline" 
