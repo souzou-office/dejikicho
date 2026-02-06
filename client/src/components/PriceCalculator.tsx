@@ -168,11 +168,14 @@ export default function PriceCalculator() {
                   </div>
                 </div>
                 
-                <Button 
+                <Button
                   className="w-full bg-gray-900 hover:bg-gray-800 text-white text-lg font-bold py-6 rounded-xl shadow-lg transition-all transform hover:-translate-y-1"
+                  asChild
                 >
-                  このプランで申し込む
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <a href="https://lin.ee/IpBr6iu" target="_blank" rel="noopener noreferrer">
+                    このプランで申し込む
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
                 </Button>
               </div>
             </div>
