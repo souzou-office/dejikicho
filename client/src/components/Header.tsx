@@ -28,11 +28,13 @@ export default function Header() {
           <button onClick={() => scrollToSection("calculator")} className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">Pricing</button>
           <button onClick={() => scrollToSection("flow")} className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">Workflow</button>
           <button onClick={() => scrollToSection("faq")} className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">FAQ</button>
-          <Button 
+          <Button
             className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm rounded-lg px-6 py-2 shadow-none"
-            onClick={() => scrollToSection("calculator")}
+            asChild
           >
-            お申し込み
+            <a href="https://lin.ee/IpBr6iu" target="_blank" rel="noopener noreferrer">
+              お申し込み
+            </a>
           </Button>
         </nav>
 
@@ -53,11 +55,13 @@ export default function Header() {
               <button onClick={() => scrollToSection("calculator")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-left py-2">Pricing</button>
               <button onClick={() => scrollToSection("flow")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-left py-2">Workflow</button>
               <button onClick={() => scrollToSection("faq")} className="text-sm font-medium text-gray-600 hover:text-gray-900 text-left py-2">FAQ</button>
-              <Button 
+              <Button
                 className="bg-gray-900 hover:bg-gray-800 text-white w-full mt-2"
-                onClick={() => scrollToSection("calculator")}
+                asChild
               >
-                お申し込み
+                <a href="https://lin.ee/IpBr6iu" target="_blank" rel="noopener noreferrer">
+                  お申し込み
+                </a>
               </Button>
             </nav>
           </div>

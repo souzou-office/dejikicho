@@ -36,12 +36,14 @@ export default function HeroSection() {
             MFクラウド専門・効率重視の新しい記帳代行です。
           </p>
           <div className="flex flex-col sm:flex-row gap-5">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-lg px-10 py-7 rounded-lg shadow-sm transition-all"
-              onClick={scrollToCalculator}
+              asChild
             >
-              料金を確認して申し込む
+              <a href="https://lin.ee/IpBr6iu" target="_blank" rel="noopener noreferrer">
+                料金を確認して申し込む
+              </a>
             </Button>
             <Button 
               variant="outline" 
